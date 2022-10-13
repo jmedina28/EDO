@@ -1,7 +1,4 @@
-import matplotlib.pyplot as plt
 import sympy
-import numpy as np
-from scipy import integrate
 
 sympy.init_printing(use_latex='mathjax')
 
@@ -17,7 +14,7 @@ def ec2():
 
     x2 = sympy.symbols('x')
     y2 = sympy.Function('y')
-    f2 = (y2(x2)*sympy.log(y2(x2), sympy.exp(1)))
+    f2 = (y2(x2)*sympy.log(y2(x2)))/sympy.sin(x2)
     sol2 = sympy.dsolve(y2(x2).diff(x2) - f2, y2(x2)) 
     print("*"*80)
     sympy.pprint(sol2)
