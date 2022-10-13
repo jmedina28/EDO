@@ -1,6 +1,7 @@
 
 
 from telnetlib import X3PAD
+from zlib import Z_FIXED
 import matplotlib.pyplot as plt
 import sympy
 import numpy as np
@@ -37,3 +38,12 @@ f3 = y3(x3).diff(x3) - y3(x3)/(x3-2) - 2*(x3-2)**2
 sol3 = sympy.dsolve(f3, y3(x3))
 print("*"*80)
 sympy.pprint(sol3)
+
+x4 = sympy.symbols('x')
+y4 = sympy.Function('y')
+
+f4 = 2*x4*(y4(x4).diff(x4)) - y4(x4) - 3*x4**2
+
+sol4 = sympy.dsolve(f4, y4(x4))
+print("*"*80)
+sympy.pprint(sol4)
