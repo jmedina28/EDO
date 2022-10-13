@@ -16,3 +16,4 @@ f = (x**2 + 1)*(y(x)**-1 + 1)
 sol = sympy.dsolve(y(x).diff(x) - f, y(x))
 
 print(sol)
+sympy.pprint(sol)
